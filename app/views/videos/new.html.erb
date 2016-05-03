@@ -1,4 +1,7 @@
 <%= form_for(@video) do |f| %>
   <%= f.text_field :video_url, placeholder: "投稿したいvimeoのURL" %>
+  <%= text_field_tag "video[tag][]", "", placeholder: "japan" %>
+  <%= text_field_tag "video[tag][]", "", placeholder: "tokyo" %>
+  <%= text_field_tag "video[tag][]", "", placeholder: "kyoto" %>
   <%= f.submit "投稿" %>
 <% end %>

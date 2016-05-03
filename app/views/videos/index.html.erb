@@ -2,4 +2,7 @@
 
   <% @videos.each do |video| %>
     <iframe src="https://player.vimeo.com/video/<%= video.vimeo_id %>" width="320" height="180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <% video.tag_list.each do |tag| %>
+      <li><%= tag %></li>
+    <% end %>
   <% end %>
