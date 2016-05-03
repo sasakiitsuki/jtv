@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  resources :videos, only: [:get, :new, :create]
+  resources :videos, only: [:index, :new, :create]
+  resources :tags, only: [:index]
   root to: "videos#index"
 end
