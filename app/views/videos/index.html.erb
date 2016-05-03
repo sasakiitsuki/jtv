@@ -1,6 +1,6 @@
-  <a href = "videos/new">新規登録</a><br>
-  <a href = "tags">タグ一覧</a><br>
-
+  <div>
+    <%= link_to "タグ一覧", tags_path, method: :get %>
+  </div>
   <% @videos.each do |video| %>
     <iframe src="https://player.vimeo.com/video/<%= video.vimeo_id %>" width="320" height="180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     <% video.tag_list.each do |tag| %>
