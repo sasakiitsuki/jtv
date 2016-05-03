@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<% if user_signed_in? %>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+    <%= link_to "post", new_video_path, method: :get %>
+<% else %>
+    <%= link_to "Sign In", new_user_session_path, class: 'post' %>
+    <%= link_to "Sign Up", new_user_registration_path, class: 'post' %>
+<% end %>
 <%= bootstrap_flash %>
 <%= yield %>
 
